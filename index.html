@@ -15,11 +15,25 @@
 <h3>Bydzie testowane qa6</h6>
 </div>
 
+<input placeholder="Tutej appId" id="input"></input>
+<button id="button">Zapisz</button>
+
               
 
       <script>
+		const button = document.getElementById("button");
+		const input = document.getElementById("input");
+		let appId = localStorage.getItem('appId');
+		input.value = appId;
+
+		button.addEventListener("click", () => {
+			localStorage.setItem('appId', input.value);
+			location.reload();
+		});
+
+
         window.CrazyCallSettings = {
-          appId: "bbsrvzgshx.crazycall.com"
+          appId: appId
         };
       </script>
       <script defer src="https://crazy-website-widget.crazycall.com/staging/widget.js"></script>
