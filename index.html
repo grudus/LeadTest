@@ -7,23 +7,43 @@
   <title>Lead Generation Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="radio.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="header">
-    <h1 class="thin center-100">Witaj w teście lead generation!</h2>
-      <h2 class="thin m-t-30 center-100">Testowane środowisko: QA6</h6>
-
-
-        <div class="input-button">
-          <input placeholder="Tutej appId" id="input" class="input"></input>
-          <button id="button" class="button pointer">Zmień appId</button>
-        </div>
+    <h1 class="thin center-100">Witaj w teście lead generation!</h1>
   </header>
 
   <main class="content">
+    <section class="radio-group">
+      <label>
+      <input type="radio" name="env" value="prod2"/>
+      <div class="box">
+          <span>Prod</span>
+        </div>
+      </label>
+      <label>
+        <input type="radio" name="env" value="preprod" />
+        <div class="box">
+          <span>Preprod</span>
+        </div>
+      </label>
+      <label>
+          <input type="radio" name="env" value="staging" />
+          <div class="box">
+            <span>Qa</span>
+          </div>
+        </label>
+    </section>
+
+
+      <div class="input-button">
+          <input placeholder="Tutej appId" id="input" class="input"></input>
+          <button id="button" class="button pointer">Zmień appId</button>
+        </div>
   </main>
 
   <footer class="footer">
@@ -32,24 +52,8 @@
     <a class="created-by" href="https://github.com/grudus" target="_blank">grudus</a>
   </footer>
 
-  <script>
-    const LOCAL_STORAGE_KEY = 'appId';
-    const button = document.getElementById("button");
-    const input = document.getElementById("input");
-    let appId = localStorage.getItem(LOCAL_STORAGE_KEY);
-    input.value = appId;
-
-    button.addEventListener("click", () => {
-      localStorage.setItem(LOCAL_STORAGE_KEY, input.value);
-      location.reload();
-    });
-
-
-    window.CrazyCallSettings = {
-      appId,
-    };
-  </script>
-  <script defer src="https://crazy-website-widget.crazycall.com/staging/widget.js"></script>
+  <script defer type="text/javascript" src="index.js"></script>
+  <!-- <script defer src="https://crazy-website-widget.crazycall.com/prod2/widget.js"></script> -->
 
 
 </body>
