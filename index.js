@@ -19,6 +19,11 @@ const onRadioClick = (radio) => {
     location.reload();
 };
 
+const getParameterByName = (name) => {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
 input.value = appId;
 
 button.addEventListener("click", () => {
@@ -28,7 +33,9 @@ button.addEventListener("click", () => {
 
 window.CrazyCallSettings = {
     appId,
+    hidePopup: getParameterByName("hide") === null,
 };
+
 
 
 const loadScript = (src) => {
