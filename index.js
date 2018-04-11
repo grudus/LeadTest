@@ -33,7 +33,7 @@ button.addEventListener("click", () => {
 
 window.CrazyCallSettings = {
     appId,
-    hidePopup: getParameterByName("hide") === null,
+    hidePopup: getParameterByName("hide") !== null,
 };
 
 
