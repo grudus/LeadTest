@@ -123,6 +123,42 @@ body {
 }
 
 
+/*menu */
+
+.left-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--button-background);
+}
+
+.navigation {
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.navigation:hover {
+  background: var(--button-background-hover);
+}
+
+
+@media screen and (max-width: 600px) {
+.left-menu{
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow-x: scroll;
+    align-items: center;
+  }
+}
+
+
 
 /* radio buttons */
 
@@ -200,3 +236,4 @@ input[type="radio"] p {
   font-family: "Dax", sans-serif;
   font-weight: 400;
 }
+
