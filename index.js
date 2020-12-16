@@ -54,4 +54,4 @@ const loadScript = (src) => {
     head.insertBefore(script, head.firstChild);
 }
 
-loadScript(`https://crazy-website-widget.crazycall.com/${environment}/widget.js`)
+loadScript(`https://crazy-website-widget.crazycall.com/${environment}/widget.js`);
