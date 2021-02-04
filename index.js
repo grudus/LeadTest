@@ -54,4 +54,12 @@ const loadScript = (src) => {
     head.insertBefore(script, head.firstChild);
 }
 
-loadScript(`https://crazy-website-widget.crazycall.com/${environment}/widget.js`);
+const envToScript = {
+    "prod2": "https://crazy-website-widget.crazycall.com/prod2/widget.js",
+    "production": "https://web-call.channels.app/widget.js",
+    "staging": "https://web-call.aws-app.be/staging/widget.js",
+    "preprod": "https://web-call.aws-app.be/preprod/widget.js",
+
+}
+
+loadScript(envToScript[environment]);
