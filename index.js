@@ -36,6 +36,10 @@ window.CrazyCallSettings = {
     hidePopup: getParameterByName("hide") !== null,
 };
 
+window.ChannelsSettings = {
+    appId,
+    hidePopup: getParameterByName("hide") !== null,
+};
 
 
 const loadScript = (src) => {
